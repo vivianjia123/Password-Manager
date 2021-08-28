@@ -1,0 +1,60 @@
+{
+  "spark": [
+    {
+      "name": "PIN",
+      "sloc": [
+        {
+          "file": "pin.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PIN.PIN",
+      "sloc": [
+        {
+          "file": "pin.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PIN.From_String",
+      "sloc": [
+        {
+          "file": "pin.ads",
+          "line": 5
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PIN.From_String",
+          "sloc": [
+            {
+              "file": "pin.ads",
+              "line": 5
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 2.54999991739169E-04,
+    "globals (basic)": 1.95000000530854E-04,
+    "globals/properties (advanced)": 4.13000001572073E-04,
+    "flow analysis": 2.14400002732873E-03
+  }
+}

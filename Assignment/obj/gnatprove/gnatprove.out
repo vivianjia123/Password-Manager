@@ -1,0 +1,103 @@
+Summary of SPARK analysis
+=========================
+
+---------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer      Provers   Justified   Unproved
+---------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .            .           .          .
+Flow Dependencies                 .           .          .          .            .           .          .
+Initialization                   13          13          .          .            .           .          .
+Non-Aliasing                      3           3          .          .            .           .          .
+Run-time Checks                  64           .          .          .    64 (CVC4)           .          .
+Assertions                        8           .          .          .     8 (CVC4)           .          .
+Functional Contracts             36           .          .          .    36 (CVC4)           .          .
+LSP Verification                  .           .          .          .            .           .          .
+---------------------------------------------------------------------------------------------------------
+Total                           124    16 (13%)          .          .    108 (87%)           .          .
+
+
+max steps used for successful proof: 1
+
+Analyzed 7 units
+in unit main, 11 subprograms and packages out of 11 analyzed
+  Main at main.adb:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (43 checks)
+  Main.Lines at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Main.Lines.Equal at mystring.ads:18, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (11 checks)
+  Main.Lines.From_String at mystring.ads:12, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (12 checks)
+  Main.Lines.Get at mystring.ads:30, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Main.Lines.Get_Line at mystring.ads:33, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Main.Lines.Length at mystring.ads:23, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Main.Lines.Less at mystring.ads:16, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
+  Main.Lines.MyString at mystring.ads:6, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Main.Lines.Substring at mystring.ads:26, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (11 checks)
+  Main.Lines.To_String at mystring.ads:8, instantiated at main.adb:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
+in unit mycommandline, 0 subprograms and packages out of 4 analyzed
+  MyCommandLine at mycommandline.ads:1 skipped
+  MyCommandLine.Argument at mycommandline.ads:7 skipped
+  MyCommandLine.Argument_Count at mycommandline.ads:3 skipped
+  MyCommandLine.Command_Name at mycommandline.ads:5 skipped
+in unit mystringtokeniser, 3 subprograms and packages out of 3 analyzed
+  MyStringTokeniser at mystringtokeniser.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings)
+  MyStringTokeniser.Is_Whitespace at mystringtokeniser.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  MyStringTokeniser.Tokenise at mystringtokeniser.ads:16 flow analyzed (0 errors, 0 checks and 0 warnings)
+in unit passworddatabase, 20 subprograms and packages out of 35 analyzed
+  PasswordDatabase at passworddatabase.ads:7 skipped
+  PasswordDatabase.Database at passworddatabase.ads:18 skipped
+  PasswordDatabase.Equal at passworddatabase.ads:41 skipped
+  PasswordDatabase.Equal at passworddatabase.ads:43 skipped
+  PasswordDatabase.From_String at passworddatabase.ads:33 skipped
+  PasswordDatabase.From_String at passworddatabase.ads:35 skipped
+  PasswordDatabase.Get at passworddatabase.ads:24 skipped
+  PasswordDatabase.Has_Password_For at passworddatabase.ads:22 skipped
+  PasswordDatabase.Init at passworddatabase.ads:20 skipped
+  PasswordDatabase.Length at passworddatabase.ads:45 skipped
+  PasswordDatabase.Less at passworddatabase.ads:40 skipped
+  PasswordDatabase.Passwords at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Equal at mystring.ads:18, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.From_String at mystring.ads:12, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Get at mystring.ads:30, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Get_Line at mystring.ads:33, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Length at mystring.ads:23, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Less at mystring.ads:16, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.MyString at mystring.ads:6, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.Substring at mystring.ads:26, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Passwords.To_String at mystring.ads:8, instantiated at passworddatabase.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.Put at passworddatabase.ads:27 skipped
+  PasswordDatabase.Remove at passworddatabase.ads:30 skipped
+  PasswordDatabase.To_String at passworddatabase.ads:37 skipped
+  PasswordDatabase.To_String at passworddatabase.ads:38 skipped
+  PasswordDatabase.URLs at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Equal at mystring.ads:18, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.From_String at mystring.ads:12, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Get at mystring.ads:30, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Get_Line at mystring.ads:33, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Length at mystring.ads:23, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Less at mystring.ads:16, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.MyString at mystring.ads:6, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.Substring at mystring.ads:26, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PasswordDatabase.URLs.To_String at mystring.ads:8, instantiated at passworddatabase.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings)
+in unit passwordmanager, 18 subprograms and packages out of 18 analyzed
+  PasswordManager at passwordmanager.ads:6 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Execute_Get_Command at passwordmanager.ads:55 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Execute_Lock at passwordmanager.ads:44 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Execute_Put_Command at passwordmanager.ads:66 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Execute_Rem_Command at passwordmanager.ads:79 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Execute_Unlock at passwordmanager.ads:33 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.GetDatabase at passwordmanager.ads:17 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.GetMasterPin at passwordmanager.ads:14 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Get_Database at passwordmanager.ads:59 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Information at passwordmanager.ads:8 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Init at passwordmanager.ads:23 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  PasswordManager.IsLocked at passwordmanager.ads:20 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Lock_Manager at passwordmanager.ads:48 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Lock_Status at passwordmanager.ads:30 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Put_Database at passwordmanager.ads:71 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.Rem_Database at passwordmanager.ads:83 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  PasswordManager.StoredDatabaseLength at passwordmanager.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PasswordManager.Unlock_Manager at passwordmanager.ads:37 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+in unit pin, 3 subprograms and packages out of 3 analyzed
+  PIN at pin.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PIN.From_String at pin.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings)
+  PIN.PIN at pin.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings)
+in unit utility, 1 subprograms and packages out of 1 analyzed
+  Utility at utility.ads:7 flow analyzed (0 errors, 0 checks and 0 warnings)

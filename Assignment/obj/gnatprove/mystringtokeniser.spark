@@ -1,0 +1,145 @@
+{
+  "spark": [
+    {
+      "name": "MyStringTokeniser",
+      "sloc": [
+        {
+          "file": "mystringtokeniser.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "MyStringTokeniser.Is_Whitespace",
+      "sloc": [
+        {
+          "file": "mystringtokeniser.ads",
+          "line": 12
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "MyStringTokeniser.Tokenise",
+      "sloc": [
+        {
+          "file": "mystringtokeniser.ads",
+          "line": 16
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "mystringtokeniser.adb",
+      "line": 7,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "MyStringTokeniser.Tokenise",
+        "sloc": [
+          {
+            "file": "mystringtokeniser.ads",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "mystringtokeniser.adb",
+      "line": 8,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "MyStringTokeniser.Tokenise",
+        "sloc": [
+          {
+            "file": "mystringtokeniser.ads",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "mystringtokeniser.ads",
+      "line": 16,
+      "col": 66,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "MyStringTokeniser.Tokenise",
+        "sloc": [
+          {
+            "file": "mystringtokeniser.ads",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "MyStringTokeniser.Is_Whitespace",
+          "sloc": [
+            {
+              "file": "mystringtokeniser.ads",
+              "line": 12
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "MyStringTokeniser.Is_Whitespace",
+            "sloc": [
+              {
+                "file": "mystringtokeniser.ads",
+                "line": 12
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "MyStringTokeniser.Tokenise",
+          "sloc": [
+            {
+              "file": "mystringtokeniser.ads",
+              "line": 16
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 4.42999997176230E-04,
+    "globals (basic)": 6.75000017508864E-04,
+    "globals/properties (advanced)": 8.51000018883497E-04,
+    "flow analysis": 7.82399997115135E-03
+  }
+}
